@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Total Income: ${{ total_income }}</p>
+<p>Total Expense: ${{ total_expense }}</p>
+<p>Savings: ${{ savings }}</p>
+
+<h2>Monthly Report (Last 6 Months)</h2>
+<table>
+    <tr>
+        <th>Year</th>
+        <th>Month</th>
+        <th>Income</th>
+        <th>Expense</th>
+    </tr>
+    {% for report in report_data %}
+    <tr>
+        <td>{{ report.year }}</td>
+        <td>{{ report.month }}</td>
+        <td>${{ report.income }}</td>
+        <td>${{ report.expense }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
