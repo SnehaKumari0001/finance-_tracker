@@ -5,3 +5,4 @@ django-allauth
 dj-database-url
 gunicorn
 python-decouple
+requests>=2.0.0
